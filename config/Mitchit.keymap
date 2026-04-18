@@ -93,7 +93,7 @@
         Combo_CLR_BT {
             bindings = <&bt BT_CLR_ALL>;
             key-positions = <13 0>;
-            layers = <1>;
+            layers = <1 0 2 3>;
         };
     };
 
