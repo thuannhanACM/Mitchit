@@ -108,7 +108,7 @@
 &kp CAPS   &kp A     &kp S         &kp D      &kp F         &kp G      &kp H      &kp J      &kp K      &kp L             &kp SEMI           &kp SQT
 &kp LSHFT  &kp Z     &kp X         &kp C      &kp V         &kp B      &kp N      &kp M      &kp COMMA  &kp DOT           &kp FSLH           &kp RET
 &kp ENTER  &kp LGUI  &kp LEFT_ALT  &kp LCTRL  &lt 1 DELETE  &kp SPACE  &kp SPACE  &kp MINUS  &kp EQUAL  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp ENTER
-           &kp LEFT  &kp UP        &kp A      &kp DOWN      &kp RIGHT  &kp LEFT   &kp DOWN   &kp A      &kp UP            &kp RIGHT
+           &kp LEFT  &kp UP        &none      &kp DOWN      &kp RIGHT  &kp LEFT   &kp DOWN   &none      &kp UP            &kp RIGHT
             >;
 
             sensor-bindings = <&Scroll_D_U>, <&Scroll_D_U>;
