@@ -117,10 +117,10 @@
         lower_layer {
             display-name = "Lower Layer";
             bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &kp F7          &kp F8          &kp F9           &kp F10  &kp F11  &kp F12
-&trans  &trans  &trans  &trans  &trans  &trans  &trans          &kp UP_ARROW    &trans           &trans   &trans   &kp PAGE_UP
-&trans  &trans  &trans  &trans  &trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans   &trans   &kp PAGE_DOWN
-&trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans          &trans           &trans   &trans   &trans
+&none   &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6          &kp F7          &kp F8           &kp F9   &kp F10  &kp DEL
+&trans  &trans  &trans  &trans  &trans  &trans  &trans          &kp UP_ARROW    &trans           &kp F11  &kp F12  &kp PAGE_UP
+&trans  &trans  &trans  &trans  &trans  &none   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans   &trans   &kp PAGE_DOWN
+&trans  &trans  &trans  &trans  &trans  &none   &trans          &trans          &trans           &trans   &trans   &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans          &trans           &trans   &trans   &trans
         &trans  &trans  &trans  &trans  &trans  &trans          &trans          &trans           &trans   &trans
             >;
