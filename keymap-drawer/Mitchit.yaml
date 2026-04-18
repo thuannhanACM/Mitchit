@@ -287,4 +287,4 @@ layers:
 combos:
 - p: [13, 0]
   k: BT CLR ALL
-  l: [Lower Layer]
+  l: [Lower Layer, Default Layer, Raise Layer, '3']
