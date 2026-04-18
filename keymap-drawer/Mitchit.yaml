@@ -50,9 +50,9 @@ layers:
   - {t: /, s: '?'}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - $$mdi:apple-keyboard-control$$
   - LGUI
   - $$mdi:apple-keyboard-option$$
+  - $$mdi:apple-keyboard-control$$
   - {t: '$$mdi:backspace-reverse-outline$$', h: Lower Layer}
   - $$mdi:keyboard-space$$
   - $$mdi:keyboard-space$$
