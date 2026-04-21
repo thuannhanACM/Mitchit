@@ -285,21 +285,21 @@ layers:
   - $$mdi:volume-high$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
 combos:
-- p: [41, 11, 51]
+- p: [11, 51, 36]
   k: BT CLR ALL
   l: [Window Layer, MacOS Layer, Window Functions, MacOS Functions]
-- p: [33, 14, 51]
+- p: [51, 2, 0]
   k: {t: Window Layer, h: toggle}
-- p: [33, 43, 51]
+- p: [51, 0, 1]
   k: {t: MacOS Layer, h: toggle}
   l: [Window Layer]
-- p: [41, 6, 51]
+- p: [51, 1, 36]
   k: {h: '1', s: '$$mdi:bluetooth-connect$$'}
   l: [Window Layer, Window Functions, MacOS Layer, MacOS Functions]
-- p: [41, 7, 51]
+- p: [51, 2, 36]
   k: {h: '2', s: '$$mdi:bluetooth-connect$$'}
   l: [Window Layer, MacOS Layer, Window Functions, MacOS Functions]
-- p: [51, 41, 47]
+- p: [51, 36, 47]
   k: $$mdi:bluetooth-off$$
 - p: [17, 16]
   k: '{'
