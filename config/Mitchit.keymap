@@ -92,32 +92,36 @@
 
         Combo_CLR_BT {
             bindings = <&bt BT_CLR_ALL>;
-            key-positions = <0 52 41>;
-            layers = <2 0>;
+            key-positions = <41 11 51>;
+            layers = <0 2 1 3>;
         };
 
         to-window {
-            bindings = <&to 1>;
-            key-positions = <52 14 33>;
-            layers = <0>;
+            bindings = <&to 0>;
+            key-positions = <33 14 51>;
         };
 
         to-mac {
-            bindings = <&to 0>;
-            key-positions = <52 33 43>;
-            layers = <1>;
+            bindings = <&to 2>;
+            key-positions = <33 43 51>;
+            layers = <0>;
         };
 
         bluetooth-0 {
             bindings = <&bt BT_SEL 0>;
-            key-positions = <41 52 1>;
-            layers = <0 1 2>;
+            key-positions = <41 6 51>;
+            layers = <0 1 2 3>;
         };
 
         bluetoot-1 {
             bindings = <&bt BT_SEL 1>;
-            key-positions = <41 52 2>;
-            layers = <0 1 2>;
+            key-positions = <41 7 51>;
+            layers = <0 2 1 3>;
+        };
+
+        bluetooth-clear-current {
+            bindings = <&bt BT_CLR>;
+            key-positions = <51 41 47>;
         };
     };
 
@@ -142,43 +146,57 @@
     keymap {
         compatible = "zmk,keymap";
 
-        Mac {
-            display-name = "Mac Layer";
-            bindings = <
-&kp ESC     &kp N1    &kp N2        &kp N3     &kp N4        &kp N5     &kp N6     &kp N7     &kp N8     &kp N9            &kp N0             &kp BSPC
-&kp TAB     &kp Q     &kp W         &kp E      &kp R         &kp T      &kp Y      &kp U      &kp I      &kp O             &kp P              &kp ENTER
-&kp LSHIFT  &kp A     &kp S         &kp D      &kp F         &kp G      &kp H      &kp J      &kp K      &kp L             &kp SEMI           &kp SQT
-&kp LGUI    &kp Z     &kp X         &kp C      &kp V         &kp B      &kp N      &kp M      &kp COMMA  &kp DOT           &kp FSLH           &none
-&none       &kp CAPS  &kp LEFT_ALT  &kp LCTRL  &lt 2 DELETE  &kp SPACE  &kp SPACE  &kp MINUS  &kp EQUAL  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &none
-            &kp LEFT  &kp UP        &none      &kp DOWN      &kp RIGHT  &kp LEFT   &kp DOWN   &none      &kp UP            &kp RIGHT
-            >;
-
-            sensor-bindings = <&Scroll_D_U>, <&Scroll_D_U>;
-        };
-
         Wins {
             display-name = "Window Layer";
             bindings = <
-&kp ESC     &kp N1    &kp N2    &kp N3    &kp N4        &kp N5     &kp N6     &kp N7     &kp N8     &kp N9            &kp N0             &kp BSPC
-&kp TAB     &kp Q     &kp W     &kp E     &kp R         &kp T      &kp Y      &kp U      &kp I      &kp O             &kp P              &kp ENTER
-&kp LSHIFT  &kp A     &kp S     &kp D     &kp F         &kp G      &kp H      &kp J      &kp K      &kp L             &kp SEMI           &kp SQT
-&kp LCTRL   &kp Z     &kp X     &kp C     &kp V         &kp B      &kp N      &kp M      &kp COMMA  &kp DOT           &kp FSLH           &none
-&none       &kp CAPS  &kp LGUI  &kp LALT  &lt 2 DELETE  &kp SPACE  &kp SPACE  &kp MINUS  &kp EQUAL  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &none
-            &kp LEFT  &kp UP    &none     &kp DOWN      &kp RIGHT  &kp LEFT   &kp DOWN   &none      &kp UP            &kp RIGHT
+&kp GRAVE     &kp N1    &kp N2    &kp N3        &kp N4           &kp N5       &kp N6       &kp N7          &kp N8            &kp N9        &kp N0          &kp MINUS
+&kp TAB       &kp Q     &kp W     &kp E         &kp R            &kp T        &kp Y        &kp U           &kp I             &kp O         &kp P           &kp EQUAL
+&kp LSHIFT    &kp A     &kp S     &kp D         &kp F            &kp G        &kp H        &kp J           &kp K             &kp L         &kp SEMI        &mt RSHFT SQT
+&kp LCTRL     &kp Z     &kp X     &kp C         &kp V            &kp B        &kp N        &kp M           &kp COMMA         &kp DOT       &kp FSLH        &mt RCTRL BACKSLASH
+&kp CAPSLOCK  &kp LCMD  &kp LALT  &lt 4 ESCAPE  &lt 4 BACKSPACE  &lt 4 SPACE  &lt 4 ENTER  &kp LEFT_ARROW  &kp RIGHT_ARROW   &kp UP_ARROW  &kp DOWN_ARROW  &none
+              &none     &none     &none         &none            &none        &kp LEFT     &kp DOWN        &kp C_PLAY_PAUSE  &kp UP        &kp RIGHT
             >;
 
             sensor-bindings = <&Scroll_D_U>, <&Scroll_D_U>;
         };
 
-        function-layer {
-            display-name = "Lower Layer";
+        win-functions-layer {
+            display-name = "Window Functions";
             bindings = <
-&kp GRAVE  &kp F1          &kp F2    &kp F3     &kp F4  &kp F5     &kp F6          &kp F7             &kp F8             &kp F9           &kp F10      &kp F11
-&trans     &none           &kp UP    &none      &none   &kp PG_UP  &mkp LCLK       &mmv MOVE_UP       &mkp RCLK          &none            &none        &kp F12
-&trans     &kp LEFT_ARROW  &kp DOWN  &kp RIGHT  &none   &kp PG_DN  &mmv MOVE_LEFT  &mmv MOVE_DOWN     &mmv MOVE_RIGHT    &none            &none        &none
-&trans     &none           &none     &none      &none   &none      &none           &none              &none              &none            &commanding  &extract_method
-&none      &none           &trans    &trans     &none   &trans     &trans          &kp LG(MINUS)      &kp LS(LG(MINUS))  &none            &none        &none
-           &none           &none     &none      &none   &none      &none           &kp C_VOLUME_DOWN  &kp K_MUTE         &kp C_VOLUME_UP  &none
+&kp F12  &kp F1       &kp F2           &kp F3  &kp F4  &kp F5             &kp F6          &kp F7             &kp F8           &kp F9           &kp F10           &kp F11
+&trans   &commanding  &extract_method  &none   &none   &kp LC(MINUS)      &mkp LCLK       &mmv MOVE_UP       &mkp RCLK        &none            &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&trans   &none        &none            &none   &none   &kp LC(LS(MINUS))  &mmv MOVE_LEFT  &mmv MOVE_DOWN     &mmv MOVE_RIGHT  &none            &none             &trans
+&trans   &none        &none            &none   &none   &none              &none           &none              &none            &none            &none             &trans
+&none    &trans       &trans           &trans  &none   &none              &none           &kp HOME           &kp END          &kp PAGE_UP      &kp PAGE_DOWN     &none
+         &none        &none            &none   &none   &none              &none           &kp C_VOLUME_DOWN  &kp K_MUTE       &kp C_VOLUME_UP  &none
+            >;
+
+            sensor-bindings = <&Scroll_LR>, <&Scroll_LR>;
+        };
+
+        mac-layer {
+            display-name = "MacOS Layer";
+            bindings = <
+&kp GRAVE     &kp N1    &kp N2     &kp N3        &kp N4           &kp N5       &kp N6       &kp N7          &kp N8            &kp N9        &kp N0          &kp MINUS
+&kp TAB       &kp Q     &kp W      &kp E         &kp R            &kp T        &kp Y        &kp U           &kp I             &kp O         &kp P           &kp EQUAL
+&kp LSHIFT    &kp A     &kp S      &kp D         &kp F            &kp G        &kp H        &kp J           &kp K             &kp L         &kp SEMI        &mt RSHFT SQT
+&kp LCMD      &kp Z     &kp X      &kp C         &kp V            &kp B        &kp N        &kp M           &kp COMMA         &kp DOT       &kp FSLH        &mt RCMD BACKSLASH
+&kp CAPSLOCK  &kp LCMD  &kp LCTRL  &lt 3 ESCAPE  &lt 3 BACKSPACE  &lt 3 SPACE  &lt 3 ENTER  &kp LEFT_ARROW  &kp RIGHT_ARROW   &kp UP_ARROW  &kp DOWN_ARROW  &none
+              &none     &none      &none         &none            &none        &kp LEFT     &kp DOWN        &kp C_PLAY_PAUSE  &kp UP        &kp RIGHT
+            >;
+
+            sensor-bindings = <&Scroll_D_U>, <&Scroll_D_U>;
+        };
+
+        mac-function-layer {
+            display-name = "MacOS Functions";
+            bindings = <
+&kp F12  &kp F1       &kp F2           &kp F3  &kp F4  &kp F5             &kp F6          &kp F7             &kp F8           &kp F9           &kp F10           &kp F11
+&trans   &commanding  &extract_method  &none   &none   &kp LG(MINUS)      &mkp LCLK       &mmv MOVE_UP       &mkp RCLK        &none            &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&trans   &none        &none            &none   &none   &kp LS(LG(MINUS))  &mmv MOVE_LEFT  &mmv MOVE_DOWN     &mmv MOVE_RIGHT  &none            &none             &trans
+&trans   &none        &none            &none   &none   &none              &none           &none              &none            &none            &none             &trans
+&none    &trans       &trans           &trans  &none   &none              &none           &kp HOME           &kp END          &kp PAGE_UP      &kp PAGE_DOWN     &none
+         &none        &none            &none   &none   &none              &none           &kp C_VOLUME_DOWN  &kp K_MUTE       &kp C_VOLUME_UP  &none
             >;
 
             sensor-bindings = <&Scroll_LR>, <&Scroll_LR>;
