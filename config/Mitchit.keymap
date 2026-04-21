@@ -92,8 +92,32 @@
 
         Combo_CLR_BT {
             bindings = <&bt BT_CLR_ALL>;
-            key-positions = <13 0>;
-            layers = <1 0 2 3>;
+            key-positions = <0 52 41>;
+            layers = <2 0>;
+        };
+
+        to-window {
+            bindings = <&to 1>;
+            key-positions = <52 14 33>;
+            layers = <0>;
+        };
+
+        to-mac {
+            bindings = <&to 0>;
+            key-positions = <52 33 43>;
+            layers = <1>;
+        };
+
+        bluetooth-0 {
+            bindings = <&bt BT_SEL 0>;
+            key-positions = <41 52 1>;
+            layers = <0 1 2>;
+        };
+
+        bluetoot-1 {
+            bindings = <&bt BT_SEL 1>;
+            key-positions = <41 52 2>;
+            layers = <0 1 2>;
         };
     };
 
@@ -118,21 +142,35 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
-            display-name = "Default Layer";
+        Mac {
+            display-name = "Mac Layer";
             bindings = <
 &kp ESC     &kp N1    &kp N2        &kp N3     &kp N4        &kp N5     &kp N6     &kp N7     &kp N8     &kp N9            &kp N0             &kp BSPC
 &kp TAB     &kp Q     &kp W         &kp E      &kp R         &kp T      &kp Y      &kp U      &kp I      &kp O             &kp P              &kp ENTER
 &kp LSHIFT  &kp A     &kp S         &kp D      &kp F         &kp G      &kp H      &kp J      &kp K      &kp L             &kp SEMI           &kp SQT
 &kp LGUI    &kp Z     &kp X         &kp C      &kp V         &kp B      &kp N      &kp M      &kp COMMA  &kp DOT           &kp FSLH           &none
-&none       &kp CAPS  &kp LEFT_ALT  &kp LCTRL  &lt 1 DELETE  &kp SPACE  &kp SPACE  &kp MINUS  &kp EQUAL  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &none
+&none       &kp CAPS  &kp LEFT_ALT  &kp LCTRL  &lt 2 DELETE  &kp SPACE  &kp SPACE  &kp MINUS  &kp EQUAL  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &none
             &kp LEFT  &kp UP        &none      &kp DOWN      &kp RIGHT  &kp LEFT   &kp DOWN   &none      &kp UP            &kp RIGHT
             >;
 
             sensor-bindings = <&Scroll_D_U>, <&Scroll_D_U>;
         };
 
-        lower_layer {
+        Wins {
+            display-name = "Window Layer";
+            bindings = <
+&kp ESC     &kp N1    &kp N2    &kp N3    &kp N4        &kp N5     &kp N6     &kp N7     &kp N8     &kp N9            &kp N0             &kp BSPC
+&kp TAB     &kp Q     &kp W     &kp E     &kp R         &kp T      &kp Y      &kp U      &kp I      &kp O             &kp P              &kp ENTER
+&kp LSHIFT  &kp A     &kp S     &kp D     &kp F         &kp G      &kp H      &kp J      &kp K      &kp L             &kp SEMI           &kp SQT
+&kp LCTRL   &kp Z     &kp X     &kp C     &kp V         &kp B      &kp N      &kp M      &kp COMMA  &kp DOT           &kp FSLH           &none
+&none       &kp CAPS  &kp LGUI  &kp LALT  &lt 2 DELETE  &kp SPACE  &kp SPACE  &kp MINUS  &kp EQUAL  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &none
+            &kp LEFT  &kp UP    &none     &kp DOWN      &kp RIGHT  &kp LEFT   &kp DOWN   &none      &kp UP            &kp RIGHT
+            >;
+
+            sensor-bindings = <&Scroll_D_U>, <&Scroll_D_U>;
+        };
+
+        function-layer {
             display-name = "Lower Layer";
             bindings = <
 &kp GRAVE  &kp F1          &kp F2    &kp F3     &kp F4  &kp F5     &kp F6          &kp F7             &kp F8             &kp F9           &kp F10      &kp F11
@@ -144,33 +182,6 @@
             >;
 
             sensor-bindings = <&Scroll_LR>, <&Scroll_LR>;
-        };
-
-        sticky_layer {
-            display-name = "Raise Layer";
-            bindings = <
-&none     &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
-&kp CAPS  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
-&none     &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
-&none     &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
-&none     &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
-          &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
-            >;
-
-            sensor-bindings = <&inc_dec_kp 0 0>, <&inc_dec_kp 0 0>;
-        };
-
-        layer_3 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-            >;
-
-            sensor-bindings = <&inc_dec_kp 0 0>, <&inc_dec_kp 0 0>;
         };
     };
 };
