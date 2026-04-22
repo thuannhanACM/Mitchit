@@ -93,30 +93,30 @@
         Combo_CLR_BT {
             bindings = <&bt BT_CLR_ALL>;
             key-positions = <11 51 36>;
-            layers = <0 2 1 3>;
+            layers = <2 0 3 1>;
         };
 
         to-window {
-            bindings = <&to 0>;
+            bindings = <&to 2>;
             key-positions = <51 2 0>;
         };
 
         to-mac {
-            bindings = <&to 2>;
+            bindings = <&to 0>;
             key-positions = <51 0 1>;
-            layers = <0>;
+            layers = <2>;
         };
 
         bluetooth-0 {
             bindings = <&bt BT_SEL 0>;
             key-positions = <51 1 36>;
-            layers = <0 1 2 3>;
+            layers = <2 3 0 1>;
         };
 
         bluetoot-1 {
             bindings = <&bt BT_SEL 1>;
             key-positions = <51 2 36>;
-            layers = <0 2 1 3>;
+            layers = <2 0 3 1>;
         };
 
         bluetooth-clear-current {
@@ -166,43 +166,15 @@
     keymap {
         compatible = "zmk,keymap";
 
-        Wins {
-            display-name = "Window Layer";
-            bindings = <
-&kp GRAVE     &kp N1    &kp N2    &kp N3        &kp N4       &kp N5           &kp N6       &kp N7          &kp N8            &kp N9        &kp N0          &kp MINUS
-&kp TAB       &kp Q     &kp W     &kp E         &kp R        &kp T            &kp Y        &kp U           &kp I             &kp O         &kp P           &kp EQUAL
-&kp LSHIFT    &kp A     &kp S     &kp D         &kp F        &kp G            &kp H        &kp J           &kp K             &kp L         &kp SEMI        &mt RSHFT SQT
-&kp LCTRL     &kp Z     &kp X     &kp C         &kp V        &kp B            &kp N        &kp M           &kp COMMA         &kp DOT       &kp FSLH        &mt RCTRL BACKSLASH
-&kp CAPSLOCK  &kp LCMD  &kp LALT  &lt 1 ESCAPE  &lt 1 SPACE  &lt 1 BACKSPACE  &lt 1 ENTER  &kp LEFT_ARROW  &kp RIGHT_ARROW   &kp UP_ARROW  &kp DOWN_ARROW  &none
-              &none     &none     &none         &none        &none            &kp LEFT     &kp DOWN        &kp C_PLAY_PAUSE  &kp UP        &kp RIGHT
-            >;
-
-            sensor-bindings = <&Scroll_D_U>, <&Scroll_D_U>;
-        };
-
-        win-functions-layer {
-            display-name = "Window Functions";
-            bindings = <
-&kp F12  &kp F1       &kp F2           &kp F3  &kp F4  &kp F5             &kp F6          &kp F7             &kp F8           &kp F9           &kp F10           &kp F11
-&trans   &commanding  &extract_method  &none   &none   &kp LC(MINUS)      &mkp LCLK       &mmv MOVE_UP       &mkp RCLK        &none            &kp LEFT_BRACKET  &kp RIGHT_BRACKET
-&trans   &none        &none            &none   &none   &kp LC(LS(MINUS))  &mmv MOVE_LEFT  &mmv MOVE_DOWN     &mmv MOVE_RIGHT  &none            &none             &kp RSHFT
-&trans   &none        &none            &none   &none   &none              &none           &none              &none            &none            &none             &kp RCTRL
-&none    &trans       &trans           &trans  &none   &kp DEL            &none           &kp HOME           &kp END          &kp PAGE_UP      &kp PAGE_DOWN     &none
-         &none        &none            &none   &none   &none              &none           &kp C_VOLUME_DOWN  &kp K_MUTE       &kp C_VOLUME_UP  &none
-            >;
-
-            sensor-bindings = <&Scroll_LR>, <&Scroll_LR>;
-        };
-
         mac-layer {
             display-name = "MacOS Layer";
             bindings = <
-&kp GRAVE     &kp N1    &kp N2     &kp N3        &kp N4       &kp N5           &kp N6       &kp N7          &kp N8            &kp N9        &kp N0          &kp MINUS
-&kp TAB       &kp Q     &kp W      &kp E         &kp R        &kp T            &kp Y        &kp U           &kp I             &kp O         &kp P           &kp EQUAL
-&kp LSHIFT    &kp A     &kp S      &kp D         &kp F        &kp G            &kp H        &kp J           &kp K             &kp L         &kp SEMI        &mt RSHFT SQT
-&kp LCMD      &kp Z     &kp X      &kp C         &kp V        &kp B            &kp N        &kp M           &kp COMMA         &kp DOT       &kp FSLH        &mt RCMD BACKSLASH
-&kp CAPSLOCK  &kp LCMD  &kp LCTRL  &lt 3 ESCAPE  &lt 3 SPACE  &lt 3 BACKSPACE  &lt 3 ENTER  &kp LEFT_ARROW  &kp RIGHT_ARROW   &kp UP_ARROW  &kp DOWN_ARROW  &none
-              &none     &none      &none         &none        &none            &kp LEFT     &kp DOWN        &kp C_PLAY_PAUSE  &kp UP        &kp RIGHT
+&kp GRAVE     &kp N1    &kp N2     &kp N3        &kp N4       &kp N5     &kp N6       &kp N7          &kp N8            &kp N9        &kp N0          &kp BACKSPACE
+&kp TAB       &kp Q     &kp W      &kp E         &kp R        &kp T      &kp Y        &kp U           &kp I             &kp O         &kp P           &kp MINUS
+&kp LSHIFT    &kp A     &kp S      &kp D         &kp F        &kp G      &kp H        &kp J           &kp K             &kp L         &kp SEMI        &mt RSHFT EQUAL
+&kp LCMD      &kp Z     &kp X      &kp C         &kp V        &kp B      &kp N        &kp M           &kp COMMA         &kp DOT       &kp FSLH        &mt RCMD SQT
+&kp CAPSLOCK  &kp LCMD  &kp LCTRL  &lt 1 ESCAPE  &lt 1 SPACE  &lt 1 DEL  &lt 1 ENTER  &kp LEFT_ARROW  &kp RIGHT_ARROW   &kp UP_ARROW  &kp DOWN_ARROW  &none
+              &none     &none      &none         &none        &none      &kp LEFT     &kp DOWN        &kp C_PLAY_PAUSE  &kp UP        &kp RIGHT
             >;
 
             sensor-bindings = <&Scroll_D_U>, <&Scroll_D_U>;
@@ -212,10 +184,38 @@
             display-name = "MacOS Functions";
             bindings = <
 &kp F12  &kp F1       &kp F2           &kp F3  &kp F4  &kp F5             &kp F6          &kp F7             &kp F8           &kp F9           &kp F10           &kp F11
-&trans   &commanding  &extract_method  &none   &none   &kp LG(MINUS)      &mkp LCLK       &mmv MOVE_UP       &mkp RCLK        &none            &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&trans   &commanding  &extract_method  &none   &none   &kp LG(MINUS)      &mkp LCLK       &mmv MOVE_UP       &mkp RCLK        &kp BACKSLASH    &kp LEFT_BRACKET  &kp RIGHT_BRACKET
 &trans   &none        &none            &none   &none   &kp LS(LG(MINUS))  &mmv MOVE_LEFT  &mmv MOVE_DOWN     &mmv MOVE_RIGHT  &none            &none             &kp RSHFT
 &trans   &none        &none            &none   &none   &none              &none           &none              &none            &none            &none             &kp RCTRL
-&none    &trans       &trans           &trans  &none   &kp DEL            &none           &kp HOME           &kp END          &kp PAGE_UP      &kp PAGE_DOWN     &none
+&none    &trans       &trans           &trans  &none   &none              &none           &kp HOME           &kp END          &kp PAGE_UP      &kp PAGE_DOWN     &none
+         &none        &none            &none   &none   &none              &none           &kp C_VOLUME_DOWN  &kp K_MUTE       &kp C_VOLUME_UP  &none
+            >;
+
+            sensor-bindings = <&Scroll_LR>, <&Scroll_LR>;
+        };
+
+        Wins {
+            display-name = "Window Layer";
+            bindings = <
+&kp GRAVE     &kp N1    &kp N2    &kp N3        &kp N4       &kp N5     &kp N6       &kp N7          &kp N8            &kp N9        &kp N0          &kp BACKSPACE
+&kp TAB       &kp Q     &kp W     &kp E         &kp R        &kp T      &kp Y        &kp U           &kp I             &kp O         &kp P           &kp MINUS
+&kp LSHIFT    &kp A     &kp S     &kp D         &kp F        &kp G      &kp H        &kp J           &kp K             &kp L         &kp SEMI        &mt RSHFT EQUAL
+&kp LCTRL     &kp Z     &kp X     &kp C         &kp V        &kp B      &kp N        &kp M           &kp COMMA         &kp DOT       &kp FSLH        &mt RCTRL SQT
+&kp CAPSLOCK  &kp LCMD  &kp LALT  &lt 3 ESCAPE  &lt 3 SPACE  &lt 3 DEL  &lt 3 ENTER  &kp LEFT_ARROW  &kp RIGHT_ARROW   &kp UP_ARROW  &kp DOWN_ARROW  &none
+              &none     &none     &none         &none        &none      &kp LEFT     &kp DOWN        &kp C_PLAY_PAUSE  &kp UP        &kp RIGHT
+            >;
+
+            sensor-bindings = <&Scroll_D_U>, <&Scroll_D_U>;
+        };
+
+        win-functions-layer {
+            display-name = "Window Functions";
+            bindings = <
+&kp F12  &kp F1       &kp F2           &kp F3  &kp F4  &kp F5             &kp F6          &kp F7             &kp F8           &kp F9           &kp F10           &kp F11
+&trans   &commanding  &extract_method  &none   &none   &kp LC(MINUS)      &mkp LCLK       &mmv MOVE_UP       &mkp RCLK        &kp BACKSLASH    &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&trans   &none        &none            &none   &none   &kp LC(LS(MINUS))  &mmv MOVE_LEFT  &mmv MOVE_DOWN     &mmv MOVE_RIGHT  &none            &none             &kp RSHFT
+&trans   &none        &none            &none   &none   &none              &none           &none              &none            &none            &none             &kp RCTRL
+&none    &trans       &trans           &trans  &none   &none              &none           &kp HOME           &kp END          &kp PAGE_UP      &kp PAGE_DOWN     &none
          &none        &none            &none   &none   &none              &none           &kp C_VOLUME_DOWN  &kp K_MUTE       &kp C_VOLUME_UP  &none
             >;
 
