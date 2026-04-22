@@ -56,10 +56,10 @@ layers:
   - {t: '$$mdi:keyboard-return$$', h: MacOS Functions}
   - {t: '$$mdi:keyboard-space$$', h: MacOS Functions}
   - {t: '$$mdi:keyboard-space$$', h: MacOS Functions}
-  - $$mdi:arrow-left-bold$$
-  - $$mdi:arrow-up-bold$$
-  - $$mdi:arrow-down-bold$$
-  - $$mdi:arrow-right-bold$$
+  - {t: '$$mdi:arrow-left-bold$$', h: MacOS Functions}
+  - {t: '$$mdi:arrow-up-bold$$', h: MacOS Functions}
+  - {t: '$$mdi:arrow-down-bold$$', h: MacOS Functions}
+  - {t: '$$mdi:arrow-right-bold$$', h: MacOS Functions}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -127,10 +127,10 @@ layers:
   - {type: held}
   - {type: held alternate}
   - {t: '$$mdi:minus-circle-outline$$', type: held alternate}
-  - HOME
-  - END
-  - PgUp
-  - PgDn
+  - {t: HOME, type: held alternate}
+  - {t: END, type: held alternate}
+  - {t: PgUp, type: held alternate}
+  - {t: PgDn, type: held alternate}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -198,10 +198,10 @@ layers:
   - {t: '$$mdi:keyboard-return$$', h: Window Functions}
   - {t: '$$mdi:keyboard-space$$', h: Window Functions}
   - {t: '$$mdi:keyboard-space$$', h: Window Functions}
-  - $$mdi:arrow-left-bold$$
-  - $$mdi:arrow-up-bold$$
-  - $$mdi:arrow-down-bold$$
-  - $$mdi:arrow-right-bold$$
+  - {t: '$$mdi:arrow-left-bold$$', h: Window Functions}
+  - {t: '$$mdi:arrow-up-bold$$', h: Window Functions}
+  - {t: '$$mdi:arrow-down-bold$$', h: Window Functions}
+  - {t: '$$mdi:arrow-right-bold$$', h: Window Functions}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -269,10 +269,10 @@ layers:
   - {type: held}
   - {type: held alternate}
   - {t: '$$mdi:minus-circle-outline$$', type: held alternate}
-  - HOME
-  - END
-  - PgUp
-  - PgDn
+  - {t: HOME, type: held alternate}
+  - {t: END, type: held alternate}
+  - {t: PgUp, type: held alternate}
+  - {t: PgDn, type: held alternate}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
