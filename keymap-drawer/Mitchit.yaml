@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: Mitchit}
 layers:
   MacOS Layer:
-  - {t: '`', s: '~'}
+  - $$mdi:keyboard-esc$$
   - {t: '1', s: '!'}
   - {t: '2', s: '@'}
   - {t: '3', s: '#'}
@@ -13,7 +13,7 @@ layers:
   - {t: '9', s: (}
   - {t: '0', s: )}
   - {t: '$$mdi:backspace$$', type: backspace}
-  - $$mdi:keyboard-tab$$
+  - {t: '`', s: '~'}
   - Q
   - W
   - E
@@ -25,7 +25,7 @@ layers:
   - O
   - P
   - {t: '-', s: _}
-  - $$mdi:apple-keyboard-shift$$
+  - $$mdi:keyboard-tab$$
   - A
   - S
   - D
@@ -37,7 +37,7 @@ layers:
   - L
   - {t: ;, s: ':'}
   - {t: '=', h: '$$mdi:apple-keyboard-shift$$', s: +}
-  - $$mdi:apple-keyboard-command$$
+  - $$mdi:apple-keyboard-shift$$
   - Z
   - X
   - C
@@ -50,16 +50,16 @@ layers:
   - {t: /, s: '?'}
   - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-command$$'}
   - $$mdi:apple-keyboard-caps$$
-  - $$mdi:apple-keyboard-command$$
   - $$mdi:apple-keyboard-control$$
-  - {t: '$$mdi:keyboard-esc$$', h: MacOS Functions}
+  - $$mdi:apple-keyboard-option$$
+  - LGUI
+  - {t: '$$mdi:keyboard-return$$', h: MacOS Functions}
   - {t: '$$mdi:keyboard-space$$', h: MacOS Functions}
-  - {t: '$$mdi:backspace-reverse-outline$$', h: MacOS Functions}
   - {t: '$$mdi:keyboard-space$$', h: MacOS Functions}
   - $$mdi:arrow-left-bold$$
-  - $$mdi:arrow-right-bold$$
   - $$mdi:arrow-up-bold$$
   - $$mdi:arrow-down-bold$$
+  - $$mdi:arrow-right-bold$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -72,7 +72,7 @@ layers:
   - $$mdi:arrow-up-bold$$
   - $$mdi:arrow-right-bold$$
   MacOS Functions:
-  - $$mdi:keyboard-esc$$
+  - {t: '$$mdi:transfer$$', type: trans}
   - F1
   - F2
   - F3
@@ -83,8 +83,8 @@ layers:
   - F8
   - F9
   - F10
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:backspace-reverse-outline$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - '&commanding'
   - '&extract_method'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -123,8 +123,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
-  - {type: held alternate}
   - {type: held alternate}
   - {t: '$$mdi:minus-circle-outline$$', type: held alternate}
   - HOME
@@ -143,7 +143,7 @@ layers:
   - $$mdi:volume-high$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   Window Layer:
-  - {t: '`', s: '~'}
+  - $$mdi:keyboard-esc$$
   - {t: '1', s: '!'}
   - {t: '2', s: '@'}
   - {t: '3', s: '#'}
@@ -155,7 +155,7 @@ layers:
   - {t: '9', s: (}
   - {t: '0', s: )}
   - {t: '$$mdi:backspace$$', type: backspace}
-  - $$mdi:keyboard-tab$$
+  - {t: '`', s: '~'}
   - Q
   - W
   - E
@@ -167,7 +167,7 @@ layers:
   - O
   - P
   - {t: '-', s: _}
-  - $$mdi:apple-keyboard-shift$$
+  - $$mdi:keyboard-tab$$
   - A
   - S
   - D
@@ -179,7 +179,7 @@ layers:
   - L
   - {t: ;, s: ':'}
   - {t: '=', h: '$$mdi:apple-keyboard-shift$$', s: +}
-  - $$mdi:apple-keyboard-control$$
+  - $$mdi:apple-keyboard-shift$$
   - Z
   - X
   - C
@@ -194,14 +194,14 @@ layers:
   - $$mdi:apple-keyboard-caps$$
   - $$mdi:apple-keyboard-command$$
   - $$mdi:apple-keyboard-option$$
-  - {t: '$$mdi:keyboard-esc$$', h: Window Functions}
+  - $$mdi:apple-keyboard-control$$
   - {t: '$$mdi:keyboard-space$$', h: Window Functions}
-  - {t: '$$mdi:backspace-reverse-outline$$', h: Window Functions}
+  - {t: '$$mdi:keyboard-return$$', h: Window Functions}
   - {t: '$$mdi:keyboard-space$$', h: Window Functions}
   - $$mdi:arrow-left-bold$$
-  - $$mdi:arrow-right-bold$$
   - $$mdi:arrow-up-bold$$
   - $$mdi:arrow-down-bold$$
+  - $$mdi:arrow-right-bold$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -214,7 +214,7 @@ layers:
   - $$mdi:arrow-up-bold$$
   - $$mdi:arrow-right-bold$$
   Window Functions:
-  - $$mdi:keyboard-esc$$
+  - {t: '$$mdi:transfer$$', type: trans}
   - F1
   - F2
   - F3
@@ -225,8 +225,8 @@ layers:
   - F8
   - F9
   - F10
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:backspace-reverse-outline$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - '&commanding'
   - '&extract_method'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -265,8 +265,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
-  - {type: held alternate}
   - {type: held alternate}
   - {t: '$$mdi:minus-circle-outline$$', type: held alternate}
   - HOME
