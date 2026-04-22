@@ -53,8 +53,8 @@ layers:
   - $$mdi:apple-keyboard-command$$
   - $$mdi:apple-keyboard-control$$
   - {t: '$$mdi:keyboard-esc$$', h: MacOS Functions}
-  - {t: '$$mdi:backspace$$', h: MacOS Functions}
   - {t: '$$mdi:keyboard-space$$', h: MacOS Functions}
+  - {t: '$$mdi:backspace-reverse-outline$$', h: MacOS Functions}
   - {t: '$$mdi:keyboard-space$$', h: MacOS Functions}
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-right-bold$$
@@ -83,7 +83,7 @@ layers:
   - F8
   - F9
   - F10
-  - $$mdi:backspace-reverse-outline$$
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - '&commanding'
   - '&extract_method'
@@ -124,7 +124,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
-  - {t: '$$mdi:backspace-reverse-outline$$', type: held alternate}
+  - {type: held alternate}
   - {type: held alternate}
   - {t: '$$mdi:minus-circle-outline$$', type: held alternate}
   - HOME
@@ -195,8 +195,8 @@ layers:
   - $$mdi:apple-keyboard-command$$
   - $$mdi:apple-keyboard-option$$
   - {t: '$$mdi:keyboard-esc$$', h: Window Functions}
-  - {t: '$$mdi:backspace$$', h: Window Functions}
   - {t: '$$mdi:keyboard-space$$', h: Window Functions}
+  - {t: '$$mdi:backspace-reverse-outline$$', h: Window Functions}
   - {t: '$$mdi:keyboard-space$$', h: Window Functions}
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-right-bold$$
@@ -225,7 +225,7 @@ layers:
   - F8
   - F9
   - F10
-  - $$mdi:backspace-reverse-outline$$
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - '&commanding'
   - '&extract_method'
@@ -266,7 +266,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
-  - {t: '$$mdi:backspace-reverse-outline$$', type: held alternate}
+  - {type: held alternate}
   - {type: held alternate}
   - {t: '$$mdi:minus-circle-outline$$', type: held alternate}
   - HOME
