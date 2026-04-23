@@ -185,7 +185,7 @@
         raise_layer_mac {
             bindings = <
 &trans  &none             &none              &none      &none      &none   &none          &none              &none       &none            &none   &trans
-&none   &CommnentLineMac  &none              &none      &none      &none   &none          &none              &none       &none            &none   &trans
+&none   &CommnentLineMac  &none              &none      &none      &none   &none          &kp LA(LEFT)       &none       &kp LA(RIGHT)    &none   &trans
 &trans  &none             &SplitFunctionMac  &none      &none      &none   &kp PAGE_UP    &kp HOME           &kp UP      &kp END          &none   &none
 &trans  &kp LG(Z)         &kp LG(X)          &kp LG(C)  &kp LG(V)  &none   &kp PAGE_DOWN  &kp LEFT           &kp DOWN    &kp RIGHT        &none   &trans
 &trans  &trans            &trans             &trans     &trans     &trans  &trans         &trans             &trans      &trans           &trans  &none
@@ -228,7 +228,7 @@
             label = "Raise Layer (Wind)";
             bindings = <
 &trans  &none             &none              &none      &none      &none   &none          &none              &none       &none            &none   &trans
-&none   &CommnentLineWin  &none              &none      &none      &none   &none          &none              &none       &none            &none   &trans
+&none   &CommnentLineWin  &none              &none      &none      &none   &none          &kp LC(LEFT)       &none       &kp LC(RIGHT)    &none   &trans
 &trans  &none             &SplitFunctionMac  &none      &none      &none   &kp PAGE_UP    &kp HOME           &kp UP      &kp END          &none   &none
 &trans  &kp LG(Z)         &kp LG(X)          &kp LG(C)  &kp LG(V)  &none   &kp PAGE_DOWN  &kp LEFT           &kp DOWN    &kp RIGHT        &none   &trans
 &trans  &trans            &trans             &trans     &trans     &trans  &trans         &trans             &trans      &trans           &trans  &none
