@@ -96,41 +96,14 @@
             layers = <0>;
         };
 
-        to-window {
-            bindings = <&to 0>;
-            key-positions = <51 2 0>;
-        };
-
-        to-mac {
-            bindings = <&to 0>;
-            key-positions = <51 0 1>;
-        };
-
-        bluetooth-0 {
-            bindings = <&bt BT_SEL 0>;
-            key-positions = <51 1 36>;
-            layers = <0>;
-        };
-
-        bluetoot-1 {
-            bindings = <&bt BT_SEL 1>;
-            key-positions = <51 2 36>;
-            layers = <0>;
-        };
-
-        bluetooth-clear-current {
-            bindings = <&bt BT_CLR>;
-            key-positions = <51 36 47>;
-        };
-
         open-brace {
             bindings = <&kp LEFT_BRACE>;
-            key-positions = <17 16>;
+            key-positions = <40 41>;
         };
 
         close-brace {
             bindings = <&kp RIGHT_BRACE>;
-            key-positions = <18 19>;
+            key-positions = <42 43>;
         };
 
         open-bracket {
@@ -145,7 +118,7 @@
     };
 
     macros {
-        commanding: new_macro {
+        CommnentLineMac: new_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LG(K)>, <&macro_wait_time 100>, <&kp LG(C)>;
@@ -153,12 +126,28 @@
             label = "NEW_MACRO";
         };
 
-        extract_method: split_function {
+        SplitFunctionMac: split_function {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LG(R)>, <&macro_wait_time 100>, <&kp LG(M)>;
 
             label = "SPLIT_FUNCTION";
+        };
+
+        CommnentLineWin: CommnentLineWin {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(K)>, <&macro_wait_time 100>, <&kp LC(C)>;
+
+            label = "COMMNENTLINEWIN";
+        };
+
+        SplitFunctionWin: SplitFunctionWin {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(R)>, <&macro_wait_time 100>, <&kp LC(M)>;
+
+            label = "SPLITFUNCTIONWIN";
         };
     };
 
@@ -169,42 +158,98 @@
             display-name = "MacOS Layer";
             bindings = <
 &kp ESC       &kp N1     &kp N2    &kp N3    &kp N4       &kp N5       &kp N6       &kp N7       &kp N8            &kp N9          &kp N0               &kp BACKSPACE
-&kp GRAVE     &kp Q      &kp W     &kp E     &kp R        &kp T        &kp Y        &kp U        &kp I             &kp O           &kp P                &lt 1 DEL
+&kp GRAVE     &kp Q      &kp W     &kp E     &kp R        &kp T        &kp Y        &kp U        &kp I             &kp O           &kp P                &kp DEL
 &kp TAB       &kp A      &kp S     &kp D     &kp F        &kp G        &kp H        &kp J        &kp K             &kp L           &kp SEMI             &kp SINGLE_QUOTE
-&kp LSHFT     &kp Z      &kp X     &kp C     &kp V        &kp B        &kp N        &kp M        &kp COMMA         &kp DOT         &kp FSLH             &kp RSHFT
-&kp CAPSLOCK  &kp LCTRL  &kp LALT  &kp LGUI  &lt 2 SPACE  &lt 2 ENTER  &lt 1 ENTER  &lt 1 K_APP  &mt RGUI MINUS    &mt RALT EQUAL  &mt RCTRL BACKSLASH  &none
+&kp LSHFT     &kp Z      &kp X     &kp C     &kp V        &kp B        &kp N        &kp M        &kp COMMA         &kp DOT         &kp SLASH            &kp RSHFT
+&kp CAPSLOCK  &kp LCTRL  &kp LALT  &kp LGUI  &lt 1 SPACE  &lt 1 ENTER  &lt 2 ENTER  &lt 2 K_APP  &mt RGUI MINUS    &mt RALT EQUAL  &mt RCTRL BACKSLASH  &none
               &none      &none     &none     &none        &none        &kp LEFT     &kp DOWN     &kp C_PLAY_PAUSE  &kp UP          &kp RIGHT
             >;
 
             sensor-bindings = <&Scroll_D_U>;
         };
 
-        mac_raise_layer {
+        lower_layer {
             bindings = <
-&bt BT_CLR_ALL  &bt BT_SEL 0     &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none          &none     &none     &none      &none   &trans
-&trans          &commanding      &kp F5        &kp F10       &kp F11       &kp F12       &kp PAGE_UP    &kp HOME  &kp UP    &kp END    &none   &none
-&trans          &extract_method  &kp F9        &none         &kp LS(F11)   &kp LS(F12)   &kp PAGE_DOWN  &kp LEFT  &kp DOWN  &kp RIGHT  &none   &none
-&trans          &kp LG(Z)        &kp LG(X)     &kp LG(C)     &kp LG(V)     &none         &none          &none     &none     &none      &none   &trans
-&none           &trans           &trans        &trans        &trans        &trans        &trans         &trans    &trans    &trans     &trans  &none
-                &none            &none         &none         &none         &none         &none          &none     &none     &none      &none
+&trans     &kp F1           &kp F2       &kp F3       &kp F4            &kp F5          &kp F6           &kp F7             &kp F8         &kp F9                &kp F10                &kp F11
+&kp GRAVE  &kp N1           &kp N2       &kp N3       &kp N4            &kp N5          &kp N6           &kp N7             &kp N8         &kp N9                &kp N0                 &kp F12
+&trans     &kp EXCLAMATION  &kp AT_SIGN  &kp HASH     &kp DOLLAR        &kp PERCENT     &kp CARET        &kp AMPERSAND      &kp ASTERISK   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PIPE
+&trans     &kp EQUAL        &kp MINUS    &kp KP_PLUS  &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp SEMICOLON  &kp COLON             &kp BACKSLASH          &trans
+&trans     &trans           &trans       &trans       &trans            &trans          &trans           &trans             &trans         &trans                &trans                 &none
+           &none            &none        &none        &none             &none           &none            &kp C_VOL_DN       &kp C_MUTE     &kp C_VOL_UP          &none
             >;
 
-            label = "Raise (MAC)";
+            label = "Lower Layer";
             sensor-bindings = <&Scroll_D_U>;
         };
 
-        lower_layer {
+        raise_layer_mac {
             bindings = <
-&trans     &kp F1           &kp F2       &kp F3       &kp F4          &kp F5           &kp F6            &kp F7             &kp F8           &kp F9                &kp F10                &kp F11
-&kp GRAVE  &kp N1           &kp N2       &kp N3       &kp N4          &kp N5           &kp N6            &kp N7             &kp N8           &kp N9                &kp N0                 &kp F12
-&trans     &kp EXCLAMATION  &kp AT_SIGN  &kp HASH     &kp DOLLAR      &kp PERCENT      &kp CARET         &kp AMPS           &kp KP_MULTIPLY  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PIPE
-&trans     &kp EQUAL        &kp MINUS    &kp KP_PLUS  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp SEMICOLON    &kp COLON             &kp BSLH               &trans
-&trans     &trans           &trans       &trans       &trans          &trans           &trans            &trans             &trans           &trans                &trans                 &none
-           &none            &none        &none        &none           &none            &none             &kp C_VOL_DN       &kp C_MUTE       &kp C_VOL_UP          &none
+&trans  &CommnentLineMac  &none              &none      &none      &none   &none          &none              &none       &none            &none   &trans
+&none   &none             &SplitFunctionMac  &none      &none      &none   &none          &none              &none       &none            &none   &trans
+&trans  &none             &none              &none      &none      &none   &kp PAGE_UP    &kp HOME           &kp UP      &kp END          &none   &none
+&trans  &kp LG(Z)         &kp LG(X)          &kp LG(C)  &kp LG(V)  &none   &kp PAGE_DOWN  &kp LEFT           &kp DOWN    &kp RIGHT        &none   &trans
+&trans  &trans            &trans             &trans     &trans     &trans  &trans         &trans             &trans      &trans           &trans  &none
+        &none             &none              &none      &none      &none   &none          &kp C_VOLUME_DOWN  &kp C_MUTE  &kp C_VOLUME_UP  &none
             >;
 
-            label = "Lower";
+            label = "Raise Layer (MAC)";
             sensor-bindings = <&Scroll_D_U>;
+        };
+
+        adjust_layer {
+            label = "Adjust Layer";
+            bindings = <
+&bt BT_CLR_ALL  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &to 0   &none   &none   &none   &none   &trans
+&trans          &none         &none         &none         &none         &none         &none   &none   &none   &none   &none   &trans
+&trans          &none         &none         &none         &none         &none         &none   &none   &none   &none   &none   &none
+&trans          &none         &none         &none         &none         &none         &none   &none   &none   &none   &none   &trans
+&none           &trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &none
+                &none         &none         &none         &none         &none         &none   &none   &none   &none   &none
+            >;
+
+            sensor-bindings = <&Scroll_D_U>;
+        };
+
+        win_layer {
+            display-name = "Window Layer";
+            bindings = <
+&kp ESC       &kp N1    &kp N2    &kp N3     &kp N4       &kp N5       &kp N6       &kp N7       &kp N8            &kp N9          &kp N0              &kp BACKSPACE
+&kp GRAVE     &kp Q     &kp W     &kp E      &kp R        &kp T        &kp Y        &kp U        &kp I             &kp O           &kp P               &kp DEL
+&kp TAB       &kp A     &kp S     &kp D      &kp F        &kp G        &kp H        &kp J        &kp K             &kp L           &kp SEMI            &kp SINGLE_QUOTE
+&kp LSHFT     &kp Z     &kp X     &kp C      &kp V        &kp B        &kp N        &kp M        &kp COMMA         &kp DOT         &kp SLASH           &kp RSHFT
+&kp CAPSLOCK  &kp LGUI  &kp LALT  &kp LCTRL  &lt 1 SPACE  &lt 1 ENTER  &lt 5 ENTER  &lt 5 K_APP  &mt RCTRL MINUS   &mt RALT EQUAL  &mt RGUI BACKSLASH  &none
+              &none     &none     &none      &none        &none        &kp LEFT     &kp DOWN     &kp C_PLAY_PAUSE  &kp UP          &kp RIGHT
+            >;
+
+            sensor-bindings = <&Scroll_D_U>;
+        };
+
+        raise_layer_win {
+            label = "Raise Layer (Wind)";
+            bindings = <
+&trans  &CommnentLineWin  &none              &none      &none      &none   &none          &none              &none       &none            &none   &trans
+&none   &none             &SplitFunctionWin  &none      &none      &none   &none          &none              &none       &none            &none   &trans
+&trans  &none             &none              &none      &none      &none   &kp PAGE_UP    &kp HOME           &kp UP      &kp END          &none   &none
+&trans  &kp LG(Z)         &kp LG(X)          &kp LG(C)  &kp LG(V)  &none   &kp PAGE_DOWN  &kp LEFT           &kp DOWN    &kp RIGHT        &none   &trans
+&trans  &trans            &trans             &trans     &trans     &trans  &trans         &trans             &trans      &trans           &trans  &none
+        &none             &none              &none      &none      &none   &none          &kp C_VOLUME_DOWN  &kp C_MUTE  &kp C_VOLUME_UP  &none
+            >;
+
+            sensor-bindings = <&Scroll_D_U>;
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        Mac-2-Adjust {
+            if-layers = <1 2>;
+            then-layer = <3>;
+        };
+
+        Window-2-Adjust {
+            if-layers = <5 1>;
+            then-layer = <3>;
         };
     };
 };
