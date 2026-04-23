@@ -161,8 +161,50 @@
 &kp GRAVE     &kp Q      &kp W     &kp E     &kp R        &kp T        &kp Y        &kp U        &kp I             &kp O           &kp P                &kp DEL
 &kp TAB       &kp A      &kp S     &kp D     &kp F        &kp G        &kp H        &kp J        &kp K             &kp L           &kp SEMI             &kp SINGLE_QUOTE
 &kp LSHFT     &kp Z      &kp X     &kp C     &kp V        &kp B        &kp N        &kp M        &kp COMMA         &kp DOT         &kp SLASH            &kp RSHFT
-&kp CAPSLOCK  &kp LCTRL  &kp LALT  &kp LGUI  &lt 1 SPACE  &lt 1 ENTER  &lt 2 ENTER  &lt 2 K_APP  &mt RGUI MINUS    &mt RALT EQUAL  &mt RCTRL BACKSLASH  &none
+&kp CAPSLOCK  &kp LCTRL  &kp LALT  &kp LGUI  &lt 4 SPACE  &lt 4 ENTER  &lt 1 ENTER  &lt 1 SPACE  &mt RGUI MINUS    &mt RALT EQUAL  &mt RCTRL BACKSLASH  &none
               &none      &none     &none     &none        &none        &kp LEFT     &kp DOWN     &kp C_PLAY_PAUSE  &kp UP          &kp RIGHT
+            >;
+
+            sensor-bindings = <&Scroll_D_U>;
+        };
+
+        raise_layer_mac {
+            bindings = <
+&trans  &none             &none              &none      &none      &none   &none          &none              &none       &none            &none   &trans
+&none   &CommnentLineMac  &none              &none      &none      &none   &kp PAGE_UP    &kp HOME           &kp UP      &kp END          &none   &trans
+&trans  &none             &SplitFunctionMac  &none      &none      &none   &kp PAGE_DOWN  &kp LEFT           &kp DOWN    &kp RIGHT        &none   &none
+&trans  &kp LG(Z)         &kp LG(X)          &kp LG(C)  &kp LG(V)  &none   &none          &kp LA(LEFT)       &none       &kp LA(RIGHT)    &none   &trans
+&trans  &trans            &trans             &trans     &trans     &trans  &trans         &trans             &trans      &trans           &trans  &none
+        &none             &none              &none      &none      &none   &none          &kp C_VOLUME_DOWN  &kp C_MUTE  &kp C_VOLUME_UP  &none
+            >;
+
+            label = "Raise Layer (MAC)";
+            sensor-bindings = <&Scroll_D_U>;
+        };
+
+        win_layer {
+            display-name = "Window Layer";
+            bindings = <
+&kp ESC       &kp N1    &kp N2    &kp N3     &kp N4       &kp N5       &kp N6       &kp N7       &kp N8            &kp N9          &kp N0              &kp BACKSPACE
+&kp GRAVE     &kp Q     &kp W     &kp E      &kp R        &kp T        &kp Y        &kp U        &kp I             &kp O           &kp P               &kp DEL
+&kp TAB       &kp A     &kp S     &kp D      &kp F        &kp G        &kp H        &kp J        &kp K             &kp L           &kp SEMI            &kp SINGLE_QUOTE
+&kp LSHFT     &kp Z     &kp X     &kp C      &kp V        &kp B        &kp N        &kp M        &kp COMMA         &kp DOT         &kp SLASH           &kp RSHFT
+&kp CAPSLOCK  &kp LGUI  &kp LALT  &kp LCTRL  &lt 4 SPACE  &lt 4 ENTER  &lt 3 ENTER  &lt 3 SPACE  &mt RCTRL MINUS   &mt RALT EQUAL  &mt RGUI BACKSLASH  &none
+              &none     &none     &none      &none        &none        &kp LEFT     &kp DOWN     &kp C_PLAY_PAUSE  &kp UP          &kp RIGHT
+            >;
+
+            sensor-bindings = <&Scroll_D_U>;
+        };
+
+        raise_layer_win {
+            label = "Raise Layer (Wind)";
+            bindings = <
+&trans  &none             &none              &none      &none      &none   &none          &none              &none       &none            &none   &trans
+&none   &CommnentLineWin  &none              &none      &none      &none   &kp PAGE_UP    &kp HOME           &kp UP      &kp END          &none   &trans
+&trans  &none             &SplitFunctionMac  &none      &none      &none   &kp PAGE_DOWN  &kp LEFT           &kp DOWN    &kp RIGHT        &none   &none
+&trans  &kp LG(Z)         &kp LG(X)          &kp LG(C)  &kp LG(V)  &none   &none          &kp LC(LEFT)       &none       &kp LC(RIGHT)    &none   &trans
+&trans  &trans            &trans             &trans     &trans     &trans  &trans         &trans             &trans      &trans           &trans  &none
+        &none             &none              &none      &none      &none   &none          &kp C_VOLUME_DOWN  &kp C_MUTE  &kp C_VOLUME_UP  &none
             >;
 
             sensor-bindings = <&Scroll_D_U>;
@@ -182,57 +224,15 @@
             sensor-bindings = <&Scroll_D_U>;
         };
 
-        raise_layer_mac {
-            bindings = <
-&trans  &none             &none              &none      &none      &none   &none          &none              &none       &none            &none   &trans
-&none   &CommnentLineMac  &none              &none      &none      &none   &none          &kp LA(LEFT)       &none       &kp LA(RIGHT)    &none   &trans
-&trans  &none             &SplitFunctionMac  &none      &none      &none   &kp PAGE_UP    &kp HOME           &kp UP      &kp END          &none   &none
-&trans  &kp LG(Z)         &kp LG(X)          &kp LG(C)  &kp LG(V)  &none   &kp PAGE_DOWN  &kp LEFT           &kp DOWN    &kp RIGHT        &none   &trans
-&trans  &trans            &trans             &trans     &trans     &trans  &trans         &trans             &trans      &trans           &trans  &none
-        &none             &none              &none      &none      &none   &none          &kp C_VOLUME_DOWN  &kp C_MUTE  &kp C_VOLUME_UP  &none
-            >;
-
-            label = "Raise Layer (MAC)";
-            sensor-bindings = <&Scroll_D_U>;
-        };
-
         adjust_layer {
             label = "Adjust Layer";
             bindings = <
-&bt BT_CLR_ALL  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &to 0   &to 4   &none   &none   &none   &trans
+&bt BT_CLR_ALL  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &to 0   &to 2   &none   &none   &none   &trans
 &trans          &none         &none         &none         &none         &none         &none   &none   &none   &none   &none   &trans
 &trans          &none         &none         &none         &none         &none         &none   &none   &none   &none   &none   &none
 &trans          &none         &none         &none         &none         &none         &none   &none   &none   &none   &none   &trans
 &none           &trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &none
                 &none         &none         &none         &none         &none         &none   &none   &none   &none   &none
-            >;
-
-            sensor-bindings = <&Scroll_D_U>;
-        };
-
-        win_layer {
-            display-name = "Window Layer";
-            bindings = <
-&kp ESC       &kp N1    &kp N2    &kp N3     &kp N4       &kp N5       &kp N6       &kp N7       &kp N8            &kp N9          &kp N0              &kp BACKSPACE
-&kp GRAVE     &kp Q     &kp W     &kp E      &kp R        &kp T        &kp Y        &kp U        &kp I             &kp O           &kp P               &kp DEL
-&kp TAB       &kp A     &kp S     &kp D      &kp F        &kp G        &kp H        &kp J        &kp K             &kp L           &kp SEMI            &kp SINGLE_QUOTE
-&kp LSHFT     &kp Z     &kp X     &kp C      &kp V        &kp B        &kp N        &kp M        &kp COMMA         &kp DOT         &kp SLASH           &kp RSHFT
-&kp CAPSLOCK  &kp LGUI  &kp LALT  &kp LCTRL  &lt 1 SPACE  &lt 1 ENTER  &lt 5 ENTER  &lt 5 K_APP  &mt RCTRL MINUS   &mt RALT EQUAL  &mt RGUI BACKSLASH  &none
-              &none     &none     &none      &none        &none        &kp LEFT     &kp DOWN     &kp C_PLAY_PAUSE  &kp UP          &kp RIGHT
-            >;
-
-            sensor-bindings = <&Scroll_D_U>;
-        };
-
-        raise_layer_win {
-            label = "Raise Layer (Wind)";
-            bindings = <
-&trans  &none             &none              &none      &none      &none   &none          &none              &none       &none            &none   &trans
-&none   &CommnentLineWin  &none              &none      &none      &none   &none          &kp LC(LEFT)       &none       &kp LC(RIGHT)    &none   &trans
-&trans  &none             &SplitFunctionMac  &none      &none      &none   &kp PAGE_UP    &kp HOME           &kp UP      &kp END          &none   &none
-&trans  &kp LG(Z)         &kp LG(X)          &kp LG(C)  &kp LG(V)  &none   &kp PAGE_DOWN  &kp LEFT           &kp DOWN    &kp RIGHT        &none   &trans
-&trans  &trans            &trans             &trans     &trans     &trans  &trans         &trans             &trans      &trans           &trans  &none
-        &none             &none              &none      &none      &none   &none          &kp C_VOLUME_DOWN  &kp C_MUTE  &kp C_VOLUME_UP  &none
             >;
 
             sensor-bindings = <&Scroll_D_U>;
@@ -243,13 +243,13 @@
         compatible = "zmk,conditional-layers";
 
         Mac-2-Adjust {
-            if-layers = <1 2>;
-            then-layer = <3>;
+            if-layers = <5 1>;
+            then-layer = <2>;
         };
 
         Window-2-Adjust {
-            if-layers = <5 1>;
-            then-layer = <3>;
+            if-layers = <3 5>;
+            then-layer = <2>;
         };
     };
 };
