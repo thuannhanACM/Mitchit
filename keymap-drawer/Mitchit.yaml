@@ -12,8 +12,8 @@ layers:
   - {t: '8', s: '*'}
   - {t: '9', s: (}
   - {t: '0', s: )}
-  - {t: '$$mdi:backspace$$', h: Adjust Layer}
-  - {t: '`', s: '~'}
+  - {t: '$$mdi:backspace$$', type: backspace}
+  - {t: '`', h: Adjust Layer, s: '~'}
   - Q
   - W
   - E
@@ -53,8 +53,8 @@ layers:
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-option$$
   - LGUI
+  - {t: 'Gui+$$mdi:keyboard-space$$', h: Raise Layer (MAC)}
   - {t: '$$mdi:keyboard-return$$', h: Raise Layer (MAC)}
-  - {t: '$$mdi:keyboard-space$$', h: Raise Layer (MAC)}
   - {t: '$$mdi:keyboard-space$$', h: Raise Layer (MAC)}
   - {t: '-', h: Raise Layer (MAC), s: _}
   - {t: '=', h: RGUI, s: +}
@@ -91,9 +91,9 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - PgUp
-  - HOME
+  - Gui+$$mdi:arrow-left-bold$$
   - $$mdi:arrow-up-bold$$
-  - END
+  - Gui+$$mdi:arrow-right-bold$$
   - F11
   - Sft+F11
   - {t: '$$mdi:transfer$$', type: trans}
@@ -154,8 +154,8 @@ layers:
   - {t: '8', s: '*'}
   - {t: '9', s: (}
   - {t: '0', s: )}
-  - {t: '$$mdi:backspace$$', h: Adjust Layer}
-  - {t: '`', s: '~'}
+  - {t: '$$mdi:backspace$$', type: backspace}
+  - {t: '`', h: Adjust Layer, s: '~'}
   - Q
   - W
   - E
@@ -296,8 +296,8 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
