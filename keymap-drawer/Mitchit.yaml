@@ -54,8 +54,8 @@ layers:
   - $$mdi:apple-keyboard-option$$
   - LGUI
   - {t: 'Gui+$$mdi:keyboard-space$$', h: Raise Layer (MAC)}
-  - {t: '$$mdi:keyboard-return$$', h: Raise Layer (MAC)}
   - {t: '$$mdi:keyboard-space$$', h: Raise Layer (MAC)}
+  - {t: '$$mdi:keyboard-return$$', h: Raise Layer (MAC)}
   - {t: '-', h: Raise Layer (MAC), s: _}
   - {t: '=', h: RGUI, s: +}
   - {t: '[', h: '$$mdi:apple-keyboard-option$$', s: '{'}
@@ -195,9 +195,9 @@ layers:
   - LGUI
   - $$mdi:apple-keyboard-option$$
   - $$mdi:apple-keyboard-control$$
+  - {t: '$$mdi:keyboard-space$$', h: Raise Layer (Window)}
+  - {t: '$$mdi:keyboard-space$$', h: Raise Layer (Window)}
   - {t: '$$mdi:keyboard-return$$', h: Raise Layer (Window)}
-  - {t: '$$mdi:keyboard-space$$', h: Raise Layer (Window)}
-  - {t: '$$mdi:keyboard-space$$', h: Raise Layer (Window)}
   - {t: '-', h: Raise Layer (Window), s: _}
   - {t: '=', h: '$$mdi:apple-keyboard-control$$', s: +}
   - {t: '[', h: '$$mdi:apple-keyboard-option$$', s: '{'}
