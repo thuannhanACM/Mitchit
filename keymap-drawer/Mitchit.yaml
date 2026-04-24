@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: Mitchit}
 layers:
   MacOS Layer:
-  - $$mdi:keyboard-esc$$
+  - {t: '`', s: '~'}
   - {t: '1', s: '!'}
   - {t: '2', s: '@'}
   - {t: '3', s: '#'}
@@ -13,7 +13,7 @@ layers:
   - {t: '9', s: (}
   - {t: '0', s: )}
   - {t: '$$mdi:backspace$$', type: backspace}
-  - {t: '`', h: Adjust Layer, s: '~'}
+  - {t: '$$mdi:keyboard-tab$$', h: Adjust Layer}
   - Q
   - W
   - E
@@ -25,7 +25,7 @@ layers:
   - O
   - P
   - {t: \, s: '|'}
-  - $$mdi:keyboard-tab$$
+  - $$mdi:apple-keyboard-shift$$
   - A
   - S
   - D
@@ -37,7 +37,7 @@ layers:
   - L
   - {t: ;, s: ':'}
   - {t: '''', s: '"'}
-  - $$mdi:apple-keyboard-shift$$
+  - LGUI
   - Z
   - X
   - C
@@ -50,16 +50,16 @@ layers:
   - {t: /, s: '?'}
   - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-shift$$'}
   - $$mdi:apple-keyboard-caps$$
-  - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-option$$
-  - LGUI
+  - $$mdi:apple-keyboard-control$$
+  - {t: '$$mdi:keyboard-esc$$', h: Raise Layer (MAC)}
   - {t: '$$mdi:keyboard-space$$', h: Raise Layer (MAC)}
   - {t: '$$mdi:keyboard-space$$', h: Raise Layer (MAC)}
   - {t: '$$mdi:keyboard-return$$', h: Raise Layer (MAC)}
-  - {t: '-', h: Raise Layer (MAC), s: _}
-  - {t: '=', h: RGUI, s: +}
-  - {t: '[', h: '$$mdi:apple-keyboard-option$$', s: '{'}
-  - {t: ']', h: '$$mdi:apple-keyboard-control$$', s: '}'}
+  - {t: '$$mdi:arrow-left-bold$$', h: Raise Layer (MAC)}
+  - {t: '$$mdi:arrow-up-bold$$', h: RGUI}
+  - {t: '$$mdi:arrow-down-bold$$', h: '$$mdi:apple-keyboard-option$$'}
+  - {t: '$$mdi:arrow-right-bold$$', h: '$$mdi:apple-keyboard-control$$'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -72,7 +72,7 @@ layers:
   - $$mdi:arrow-up-bold$$
   - $$mdi:arrow-right-bold$$
   Raise Layer (MAC):
-  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:keyboard-esc$$
   - F1
   - F2
   - F3
@@ -90,10 +90,10 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - PgUp
-  - Gui+$$mdi:arrow-left-bold$$
-  - $$mdi:arrow-up-bold$$
-  - Gui+$$mdi:arrow-right-bold$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - F11
   - Sft+F11
   - {t: '$$mdi:transfer$$', type: trans}
@@ -102,10 +102,10 @@ layers:
   - {t: D, h: '$$mdi:apple-keyboard-command$$'}
   - {t: F, h: '$$mdi:apple-keyboard-command$$'}
   - Gui+G
-  - PgDn
-  - $$mdi:arrow-left-bold$$
-  - $$mdi:arrow-down-bold$$
-  - $$mdi:arrow-right-bold$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - PgUp
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - F12
   - Sft+F12
   - {t: '$$mdi:transfer$$', type: trans}
@@ -114,17 +114,17 @@ layers:
   - {t: C, h: '$$mdi:apple-keyboard-command$$'}
   - {t: V, h: '$$mdi:apple-keyboard-command$$'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - Gui+$$mdi:arrow-left-bold$$
   - Alt+$$mdi:arrow-left-bold$$
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - PgDn
   - Alt+$$mdi:arrow-right-bold$$
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - Gui+$$mdi:arrow-right-bold$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
+  - {type: held alternate}
   - {type: held alternate}
   - {type: held alternate}
   - {type: held alternate}
@@ -356,16 +356,16 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
 combos:
-- p: [28, 29]
+- p: [29, 28]
   k: '{'
   l: [MacOS Layer, Adjust Layer, Raise Layer (MAC), Raise Layer (Window)]
 - p: [30, 31]
   k: '}'
   l: [MacOS Layer, Adjust Layer, Raise Layer (MAC), Raise Layer (Window)]
-- p: [40, 41]
+- p: [28, 27]
   k: {t: '[', s: '{'}
   l: [MacOS Layer, Adjust Layer, Raise Layer (MAC), Raise Layer (Window)]
-- p: [42, 43]
+- p: [31, 32]
   k: {t: ']', s: '}'}
   l: [MacOS Layer, Adjust Layer, Raise Layer (MAC), Raise Layer (Window)]
 - p: [54, 55]
@@ -379,4 +379,10 @@ combos:
   l: [MacOS Layer, Adjust Layer, Raise Layer (MAC), Raise Layer (Window)]
 - p: [57, 58]
   k: KP DIVIDE
+  l: [MacOS Layer, Adjust Layer, Raise Layer (MAC), Raise Layer (Window)]
+- p: [42, 43]
+  k: _
+  l: [MacOS Layer, Adjust Layer, Raise Layer (MAC), Raise Layer (Window)]
+- p: [43, 44]
+  k: {t: '=', s: +}
   l: [MacOS Layer, Adjust Layer, Raise Layer (MAC), Raise Layer (Window)]
