@@ -192,7 +192,7 @@
             display-name = "MacOS Layer";
             bindings = <
 &kp GRAVE     &kp N1    &kp N2     &kp N3     &kp N4       &kp N5       &kp N6       &kp N7      &kp N8            &kp N9         &kp N0           &kp BACKSPACE
-&lt 4 TAB     &kp Q     &kp W      &kp E      &kp R        &kp T        &kp Y        &kp U       &kp I             &kp O          &kp P            &kp BACKSLASH
+&kp TAB       &kp Q     &kp W      &kp E      &kp R        &kp T        &kp Y        &kp U       &kp I             &kp O          &kp P            &lt 4 BACKSLASH
 &kp LSHFT     &kp A     &kp S      &kp D      &kp F        &kp G        &kp H        &kp J       &kp K             &kp L          &kp SEMI         &kp SINGLE_QUOTE
 &kp LGUI      &kp Z     &kp X      &kp C      &kp V        &kp B        &kp N        &kp M       &kp COMMA         &kp DOT        &kp SLASH        &mt RSHFT ENTER
 &kp CAPSLOCK  &kp LALT  &kp LCTRL  &lt 1 ESC  &lt 1 SPACE  &lt 1 SPACE  &lt 1 ENTER  &lt 1 LEFT  &mt RGUI UP       &mt RALT DOWN  &mt RCTRL RIGHT  &none
@@ -205,7 +205,7 @@
         raise_layer_mac {
             bindings = <
 &kp ESCAPE  &kp F1            &kp F2             &kp F3     &kp F4     &kp F5     &kp F6        &kp F7             &kp F8         &kp F9           &kp F10        &kp DEL
-&none       &CommnentLineMac  &SplitFunctionMac  &none      &none      &none      &none         &none              &none          &none            &kp F11        &kp LS(F11)
+&trans      &CommnentLineMac  &SplitFunctionMac  &none      &none      &none      &none         &none              &none          &none            &kp F11        &kp LS(F11)
 &trans      &kp LG(A)         &kp LG(S)          &kp LG(D)  &kp LG(F)  &kp LG(G)  &none         &none              &kp PAGE_UP    &none            &kp F12        &kp LS(F12)
 &trans      &kp LG(Z)         &kp LG(X)          &kp LG(C)  &kp LG(V)  &none      &kp LG(LEFT)  &kp LA(LEFT)       &kp PAGE_DOWN  &kp LA(RIGHT)    &kp LG(RIGHT)  &trans
 &trans      &trans            &trans             &trans     &trans     &trans     &trans        &trans             &trans         &trans           &trans         &none
