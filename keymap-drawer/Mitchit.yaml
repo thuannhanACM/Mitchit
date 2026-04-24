@@ -53,7 +53,7 @@ layers:
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-option$$
   - LGUI
-  - {t: 'Gui+$$mdi:keyboard-space$$', h: Raise Layer (MAC)}
+  - {t: '$$mdi:keyboard-space$$', h: Raise Layer (MAC)}
   - {t: '$$mdi:keyboard-space$$', h: Raise Layer (MAC)}
   - {t: '$$mdi:keyboard-return$$', h: Raise Layer (MAC)}
   - {t: '-', h: Raise Layer (MAC), s: _}
