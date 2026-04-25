@@ -52,7 +52,7 @@ layers:
   - $$mdi:apple-keyboard-caps$$
   - $$mdi:apple-keyboard-option$$
   - $$mdi:apple-keyboard-control$$
-  - {t: LGUI, h: Raise Layer (MAC)}
+  - LGUI
   - {t: '$$mdi:keyboard-space$$', h: Raise Layer (MAC)}
   - {t: '$$mdi:keyboard-space$$', h: Raise Layer (MAC)}
   - {t: '$$mdi:keyboard-return$$', h: Raise Layer (MAC)}
@@ -123,8 +123,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
-  - {type: held alternate}
   - {type: held alternate}
   - {type: held alternate}
   - {type: held alternate}
