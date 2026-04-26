@@ -43,8 +43,8 @@ layers:
   - C
   - V
   - B
-  - N
-  - M
+  - '&td_N_Minus'
+  - '&td_M_Equal'
   - {t: ',', s: <}
   - {t: ., s: '>'}
   - {t: /, s: '?'}
