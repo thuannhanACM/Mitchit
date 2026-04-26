@@ -57,8 +57,6 @@
             label = "TD_ESC_GRAVE";
             #binding-cells = <0>;
             bindings = <&kp ESC>, <&kp GRAVE>;
-
-            tapping-term-ms = <100>;
         };
 
         Scroll_U_D: Scroll_U_D {
@@ -93,8 +91,6 @@
             label = "TD_9_LEFTBRACKET";
             #binding-cells = <0>;
             bindings = <&kp N9>, <&kp LEFT_BRACKET>;
-
-            tapping-term-ms = <100>;
         };
 
         td_0_RightBracket: td_0_RightBracket {
@@ -102,8 +98,6 @@
             label = "TD_0_RIGHTBRACKET";
             #binding-cells = <0>;
             bindings = <&kp N0>, <&kp RIGHT_BRACKET>;
-
-            tapping-term-ms = <100>;
         };
 
         td_quote_backslash: td_quote_backslash {
@@ -120,8 +114,6 @@
             label = "TD_UP_PAGEUP";
             #binding-cells = <0>;
             bindings = <&kp UP>, <&kp PAGE_UP>;
-
-            tapping-term-ms = <100>;
         };
 
         td_down_pagedown: td_down_pagedown {
@@ -129,8 +121,6 @@
             label = "TD_DOWN_PAGEDOWN";
             #binding-cells = <0>;
             bindings = <&kp DOWN>, <&kp PAGE_DOWN>;
-
-            tapping-term-ms = <100>;
         };
 
         td_left_preWord: td_left_preWord {
@@ -138,8 +128,6 @@
             label = "TD_LEFT_PREWORD";
             #binding-cells = <0>;
             bindings = <&kp LEFT>, <&kp LA(LEFT)>;
-
-            tapping-term-ms = <100>;
         };
 
         td_right_nextWord: td_right_nextWord {
@@ -147,8 +135,6 @@
             label = "TD_RIGHT_NEXTWORD";
             #binding-cells = <0>;
             bindings = <&kp RIGHT>, <&kp LA(RIGHT)>;
-
-            tapping-term-ms = <100>;
         };
 
         td_N_Minus: td_N_Minus {
@@ -156,8 +142,6 @@
             label = "TD_N_MINUS";
             #binding-cells = <0>;
             bindings = <&kp N>, <&kp MINUS>;
-
-            tapping-term-ms = <100>;
         };
 
         td_M_Equal: td_M_Equal {
@@ -165,8 +149,6 @@
             label = "TD_M_EQUAL";
             #binding-cells = <0>;
             bindings = <&kp M>, <&kp EQUAL>;
-
-            tapping-term-ms = <100>;
         };
     };
 
