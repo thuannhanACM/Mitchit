@@ -52,11 +52,13 @@
             tap-ms = <20>;
         };
 
-        td_Grave_ESC: td_Grave_ESC {
+        td_Esc_Grave: td_Esc_Grave {
             compatible = "zmk,behavior-tap-dance";
-            label = "TD_GRAVE_ESC";
+            label = "TD_ESC_GRAVE";
             #binding-cells = <0>;
-            bindings = <&kp GRAVE>, <&kp ESCAPE>;
+            bindings = <&kp ESC>, <&kp GRAVE>;
+
+            tapping-term-ms = <100>;
         };
 
         Scroll_U_D: Scroll_U_D {
@@ -91,6 +93,8 @@
             label = "TD_9_LEFTBRACKET";
             #binding-cells = <0>;
             bindings = <&kp N9>, <&kp LEFT_BRACKET>;
+
+            tapping-term-ms = <100>;
         };
 
         td_0_RightBracket: td_0_RightBracket {
@@ -98,6 +102,53 @@
             label = "TD_0_RIGHTBRACKET";
             #binding-cells = <0>;
             bindings = <&kp N0>, <&kp RIGHT_BRACKET>;
+
+            tapping-term-ms = <100>;
+        };
+
+        td_quote_backslash: td_quote_backslash {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_QUOTE_BACKSLASH";
+            #binding-cells = <0>;
+            bindings = <&kp SINGLE_QUOTE>, <&kp BACKSLASH>;
+
+            tapping-term-ms = <100>;
+        };
+
+        td_up_pageup: td_up_pageup {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_UP_PAGEUP";
+            #binding-cells = <0>;
+            bindings = <&kp UP>, <&kp PAGE_UP>;
+
+            tapping-term-ms = <100>;
+        };
+
+        td_down_pagedown: td_down_pagedown {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_DOWN_PAGEDOWN";
+            #binding-cells = <0>;
+            bindings = <&kp DOWN>, <&kp PAGE_DOWN>;
+
+            tapping-term-ms = <100>;
+        };
+
+        td_left_preWord: td_left_preWord {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_LEFT_PREWORD";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT>, <&kp LA(LEFT)>;
+
+            tapping-term-ms = <100>;
+        };
+
+        td_right_nextWord: td_right_nextWord {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_RIGHT_NEXTWORD";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT>, <&kp LA(RIGHT)>;
+
+            tapping-term-ms = <100>;
         };
     };
 
@@ -129,7 +180,7 @@
         };
 
         underscore {
-            bindings = <&kp UNDERSCORE>;
+            bindings = <&kp MINUS>;
             key-positions = <42 43>;
             layers = <0 4 1 3>;
         };
@@ -181,12 +232,12 @@
         mac_layer {
             display-name = "MacOS Layer";
             bindings = <
-&td_Grave_ESC  &kp N1    &kp N2     &kp N3    &kp N4       &kp N5       &kp N6       &kp N7       &kp N8            &td_9_LeftBracket       &td_0_RightBracket      &kp BACKSPACE
-&kp TAB        &kp Q     &kp W      &kp E     &kp R        &kp T        &kp Y        &kp U        &kp I             &kp O                   &kp P                   &lt 4 BACKSLASH
-&kp ESC        &kp A     &kp S      &kp D     &kp F        &kp G        &kp H        &kp J        &kp K             &kp L                   &kp SEMI                &kp SINGLE_QUOTE
-&kp LSHIFT     &kp Z     &kp X      &kp C     &kp V        &kp B        &kp N        &kp M        &kp COMMA         &kp DOT                 &kp SLASH               &mt RSHFT ENTER
-&kp CAPSLOCK   &kp LALT  &kp LCTRL  &kp LGUI  &lt 1 SPACE  &lt 1 SPACE  &lt 1 ENTER  &lt 1 MINUS  &mt RGUI EQUAL    &mt RCTRL LEFT_BRACKET  &mt RALT RIGHT_BRACKET  &none
-               &none     &none      &none     &none        &none        &kp LEFT     &kp DOWN     &kp C_PLAY_PAUSE  &kp UP                  &kp RIGHT
+&td_Esc_Grave       &kp N1    &kp N2     &kp N3    &kp N4       &kp N5       &kp N6       &kp N7            &kp N8            &td_9_LeftBracket  &td_0_RightBracket  &kp BACKSPACE
+&lt 4 LEFT_BRACKET  &kp Q     &kp W      &kp E     &kp R        &kp T        &kp Y        &kp U             &kp I             &kp O              &kp P               &lt 4 RIGHT_BRACKET
+&kp TAB             &kp A     &kp S      &kp D     &kp F        &kp G        &kp H        &kp J             &kp K             &kp L              &kp SEMI            &td_quote_backslash
+&kp LSHIFT          &kp Z     &kp X      &kp C     &kp V        &kp B        &kp N        &kp M             &kp COMMA         &kp DOT            &kp SLASH           &mt RSHFT ENTER
+&kp CAPSLOCK        &kp LALT  &kp LCTRL  &kp LGUI  &lt 1 SPACE  &lt 1 SPACE  &lt 1 ENTER  &td_left_preWord  &td_up_pageup     &td_down_pagedown  &td_right_nextWord  &none
+                    &none     &none      &none     &none        &none        &kp LEFT     &kp DOWN          &kp C_PLAY_PAUSE  &kp UP             &kp RIGHT
             >;
 
             sensor-bindings = <&Scroll_D_U>;
@@ -194,12 +245,12 @@
 
         raise_layer_mac {
             bindings = <
-&kp ESCAPE  &kp F1             &kp F2  &kp F3   &kp F4   &kp F5       &kp F6         &kp F7             &kp F8      &kp F9           &kp F10        &kp DEL
-&trans      &CommnentLineMac   &kp F9  &kp F10  &kp F11  &kp LS(F12)  &kp PAGE_UP    &none              &none       &none            &kp F11        &kp LS(F11)
-&trans      &SplitFunctionMac  &none   &none    &kp F11  &kp F12      &kp PAGE_DOWN  &kp LA(LEFT)       &kp UP      &kp LA(RIGHT)    &kp F12        &kp LS(F12)
-&trans      &none              &none   &none    &none    &none        &kp LG(LEFT)   &kp LEFT           &kp DOWN    &kp RIGHT        &kp LG(RIGHT)  &trans
-&trans      &trans             &trans  &trans   &trans   &trans       &trans         &trans             &trans      &trans           &trans         &none
-            &none              &none   &none    &none    &none        &none          &kp C_VOLUME_DOWN  &kp C_MUTE  &kp C_VOLUME_UP  &none
+&trans  &trans  &trans  &trans   &trans       &trans       &trans            &trans             &trans      &trans           &trans         &kp DEL
+&trans  &kp F1  &kp F2  &kp F3   &kp F4       &kp F5       &kp F6            &kp F7             &kp F8      &kp F9           &kp F10        &trans
+&trans  &none   &none   &kp F10  &kp F11      &kp F12      &CommnentLineMac  &SplitFunctionMac  &none       &none            &kp F11        &kp LS(F11)
+&trans  &none   &none   &none    &kp LS(F11)  &kp LS(F12)  &kp LG(MINUS)     &kp LG(LS(MINUS))  &none       &none            &kp F12        &kp LS(F12)
+&trans  &trans  &trans  &trans   &trans       &trans       &trans            &kp LG(LEFT)       &trans      &trans           &kp LG(RIGHT)  &none
+        &none   &none   &none    &none        &none        &none             &kp C_VOLUME_DOWN  &kp C_MUTE  &kp C_VOLUME_UP  &none
             >;
 
             label = "Raise Layer (MAC)";
