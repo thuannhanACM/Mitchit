@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: Mitchit}
 layers:
   MacOS Layer:
-  - '&td_Grave_ESC'
+  - '&td_Esc_Grave'
   - {t: '1', s: '!'}
   - {t: '2', s: '@'}
   - {t: '3', s: '#'}
@@ -13,7 +13,7 @@ layers:
   - '&td_9_LeftBracket'
   - '&td_0_RightBracket'
   - {t: '$$mdi:backspace$$', type: backspace}
-  - $$mdi:keyboard-tab$$
+  - {t: '[', h: Adjust Layer, s: '{'}
   - Q
   - W
   - E
@@ -24,8 +24,8 @@ layers:
   - I
   - O
   - P
-  - {t: \, h: Adjust Layer, s: '|'}
-  - $$mdi:keyboard-esc$$
+  - {t: ']', h: Adjust Layer, s: '}'}
+  - $$mdi:keyboard-tab$$
   - A
   - S
   - D
@@ -36,7 +36,7 @@ layers:
   - K
   - L
   - {t: ;, s: ':'}
-  - {t: '''', s: '"'}
+  - '&td_quote_backslash'
   - $$mdi:apple-keyboard-shift$$
   - Z
   - X
@@ -56,10 +56,10 @@ layers:
   - {t: '$$mdi:keyboard-space$$', h: Raise Layer (MAC)}
   - {t: '$$mdi:keyboard-space$$', h: Raise Layer (MAC)}
   - {t: '$$mdi:keyboard-return$$', h: Raise Layer (MAC)}
-  - {t: '-', h: Raise Layer (MAC), s: _}
-  - {t: '=', h: RGUI, s: +}
-  - {t: '[', h: '$$mdi:apple-keyboard-control$$', s: '{'}
-  - {t: ']', h: '$$mdi:apple-keyboard-option$$', s: '}'}
+  - '&td_left_preWord'
+  - '&td_up_pageup'
+  - '&td_down_pagedown'
+  - '&td_right_nextWord'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -72,7 +72,19 @@ layers:
   - $$mdi:arrow-up-bold$$
   - $$mdi:arrow-right-bold$$
   Raise Layer (MAC):
-  - $$mdi:keyboard-esc$$
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:backspace-reverse-outline$$
+  - {t: '$$mdi:transfer$$', type: trans}
   - F1
   - F2
   - F3
@@ -83,43 +95,31 @@ layers:
   - F8
   - F9
   - F10
-  - $$mdi:backspace-reverse-outline$$
   - {t: '$$mdi:transfer$$', type: trans}
-  - '&CommnentLineMac'
-  - F9
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - F10
   - F11
-  - Sft+F12
-  - PgUp
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - F12
+  - '&CommnentLineMac'
+  - '&SplitFunctionMac'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - F11
   - Sft+F11
   - {t: '$$mdi:transfer$$', type: trans}
-  - '&SplitFunctionMac'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - F11
-  - F12
-  - PgDn
-  - Alt+$$mdi:arrow-left-bold$$
-  - $$mdi:arrow-up-bold$$
-  - Alt+$$mdi:arrow-right-bold$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - Sft+F11
+  - Sft+F12
+  - {t: Gui+-, s: Gui+_}
+  - {t: Gui+Sft+-, s: Gui+Sft+_}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - F12
   - Sft+F12
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - Gui+$$mdi:arrow-left-bold$$
-  - $$mdi:arrow-left-bold$$
-  - $$mdi:arrow-down-bold$$
-  - $$mdi:arrow-right-bold$$
-  - Gui+$$mdi:arrow-right-bold$$
-  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -127,10 +127,10 @@ layers:
   - {type: held}
   - {type: held alternate}
   - {type: held alternate}
-  - {type: held alternate}
+  - Gui+$$mdi:arrow-left-bold$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - Gui+$$mdi:arrow-right-bold$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -297,18 +297,18 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held alternate}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {type: held}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -369,7 +369,7 @@ combos:
   k: KP DIVIDE
   l: [MacOS Layer, Adjust Layer, Raise Layer (MAC), Raise Layer (Window)]
 - p: [42, 43]
-  k: _
+  k: {t: '-', s: _}
   l: [MacOS Layer, Adjust Layer, Raise Layer (MAC), Raise Layer (Window)]
 - p: [43, 44]
   k: {t: '=', s: +}
