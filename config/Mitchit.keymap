@@ -100,20 +100,6 @@
             bindings = <&kp RIGHT_BRACKET>, <&kp RIGHT_PARENTHESIS>;
         };
 
-        td_9_0: td_9_0 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_9_0";
-            #binding-cells = <0>;
-            bindings = <&kp N9>, <&kp N0>;
-        };
-
-        td_0_9: td_0_9 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_0_9";
-            #binding-cells = <0>;
-            bindings = <&kp N0>, <&kp N9>;
-        };
-
         td_equal_copy: td_equal_copy {
             compatible = "zmk,behavior-tap-dance";
             label = "TD_EQUAL_COPY";
@@ -126,6 +112,76 @@
             label = "TD_BACKSLASH_PASTE";
             #binding-cells = <0>;
             bindings = <&kp BACKSLASH>, <&kp LG(V)>;
+        };
+
+        td_1_Exclamation: td_1_Exclamation {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_1_EXCLAMATION";
+            #binding-cells = <0>;
+            bindings = <&kp NUMBER_1>, <&kp V>;
+        };
+
+        td_2_AtSign: td_2_AtSign {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_2_ATSIGN";
+            #binding-cells = <0>;
+            bindings = <&kp NUMBER_2>, <&kp AT_SIGN>;
+        };
+
+        td_3_Hash: td_3_Hash {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_3_HASH";
+            #binding-cells = <0>;
+            bindings = <&kp NUMBER_3>, <&kp HASH>;
+        };
+
+        td_4_Dollar: td_4_Dollar {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_4_DOLLAR";
+            #binding-cells = <0>;
+            bindings = <&kp NUMBER_4>, <&kp DOLLAR>;
+        };
+
+        td_5_Percent: td_5_Percent {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_5_PERCENT";
+            #binding-cells = <0>;
+            bindings = <&kp N5>, <&kp PERCENT>;
+        };
+
+        td_6_Caret: td_6_Caret {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_6_CARET";
+            #binding-cells = <0>;
+            bindings = <&kp N6>, <&kp CARET>;
+        };
+
+        td_7_And: td_7_And {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_7_AND";
+            #binding-cells = <0>;
+            bindings = <&kp N7>, <&kp AMPS>;
+        };
+
+        td_8_Asterisk: td_8_Asterisk {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_8_ASTERISK";
+            #binding-cells = <0>;
+            bindings = <&kp N8>, <&kp ASTERISK>;
+        };
+
+        td_9_LeftParenthesis: td_9_LeftParenthesis {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_9_LEFTPARENTHESIS";
+            #binding-cells = <0>;
+            bindings = <&kp N9>, <&kp LEFT_PARENTHESIS>;
+        };
+
+        td_0_RightParenthesis: td_0_RightParenthesis {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_0_RIGHTPARENTHESIS";
+            #binding-cells = <0>;
+            bindings = <&kp N0>, <&kp RIGHT_PARENTHESIS>;
         };
     };
 
@@ -184,12 +240,12 @@
 
         raise_layer_mac {
             bindings = <
-&trans  &CommnentLineMac  &SplitFunctionMac  &none    &none    &none              &kp N7             &kp N8             &td_9_0     &kp KP_PLUS      &kp KP_MINUS   &trans
-&trans  &kp F1            &kp F2             &kp F3   &kp F4   &none              &kp N4             &kp N5             &kp N6      &kp KP_MULTIPLY  &kp KP_DIVIDE  &trans
-&trans  &kp F5            &kp F6             &kp F7   &kp F8   &kp LS(LG(MINUS))  &kp N1             &kp N2             &kp N3      &kp LG(LEFT)     &kp PAGE_UP    &kp LG(RIGHT)
-&trans  &kp F9            &kp F10            &kp F11  &kp F12  &kp LG(MINUS)      &kp LG(LS(MINUS))  &td_0_9            &kp DOT     &kp LA(LEFT)     &kp PAGE_DOWN  &kp LA(RIGHT)
-&trans  &trans            &trans             &trans   &trans   &trans             &trans             &trans             &kp LG(C)   &kp LG(V)        &trans         &none
-        &none             &none              &none    &none    &none              &none              &kp C_VOLUME_DOWN  &kp C_MUTE  &kp C_VOLUME_UP  &none
+&trans  &CommnentLineMac  &SplitFunctionMac  &none    &none    &none              &td_7_And          &td_8_Asterisk          &td_9_LeftParenthesis  &kp KP_PLUS      &kp KP_MINUS   &trans
+&trans  &kp F1            &kp F2             &kp F3   &kp F4   &none              &td_4_Dollar       &td_5_Percent           &td_6_Caret            &kp KP_MULTIPLY  &kp KP_DIVIDE  &trans
+&trans  &kp F5            &kp F6             &kp F7   &kp F8   &kp LS(LG(MINUS))  &td_1_Exclamation  &td_2_AtSign            &td_3_Hash             &kp LG(LEFT)     &kp PAGE_UP    &kp LG(RIGHT)
+&trans  &kp F9            &kp F10            &kp F11  &kp F12  &kp LG(MINUS)      &kp LG(LS(MINUS))  &td_0_RightParenthesis  &kp DOT                &kp LA(LEFT)     &kp PAGE_DOWN  &kp LA(RIGHT)
+&trans  &trans            &trans             &trans   &trans   &trans             &trans             &trans                  &kp LG(C)              &kp LG(V)        &trans         &none
+        &none             &none              &none    &none    &none              &none              &kp C_VOLUME_DOWN       &kp C_MUTE             &kp C_VOLUME_UP  &none
             >;
 
             label = "Raise Layer (MAC)";
