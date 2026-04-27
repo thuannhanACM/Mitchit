@@ -78,9 +78,9 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '7', s: '&'}
-  - {t: '8', s: '*'}
-  - '&td_9_0'
+  - '&td_7_And'
+  - '&td_8_Asterisk'
+  - '&td_9_LeftParenthesis'
   - KP PLUS
   - KP MINUS
   - {t: '$$mdi:transfer$$', type: trans}
@@ -90,9 +90,9 @@ layers:
   - F3
   - F4
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '4', s: $}
-  - {t: '5', s: '%'}
-  - {t: '6', s: ^}
+  - '&td_4_Dollar'
+  - '&td_5_Percent'
+  - '&td_6_Caret'
   - KP MULTIPLY
   - KP DIVIDE
   - {t: '$$mdi:transfer$$', type: trans}
@@ -102,9 +102,9 @@ layers:
   - F7
   - F8
   - {t: Sft+Gui+-, s: Sft+Gui+_}
-  - {t: '1', s: '!'}
-  - {t: '2', s: '@'}
-  - {t: '3', s: '#'}
+  - '&td_1_Exclamation'
+  - '&td_2_AtSign'
+  - '&td_3_Hash'
   - Gui+$$mdi:arrow-left-bold$$
   - PgUp
   - Gui+$$mdi:arrow-right-bold$$
@@ -115,7 +115,7 @@ layers:
   - F12
   - {t: Gui+-, s: Gui+_}
   - {t: Gui+Sft+-, s: Gui+Sft+_}
-  - '&td_0_9'
+  - '&td_0_RightParenthesis'
   - {t: ., s: '>'}
   - Alt+$$mdi:arrow-left-bold$$
   - PgDn
